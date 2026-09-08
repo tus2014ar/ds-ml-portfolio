@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tushar · Data Scientist / ML Engineer</title>
+<meta name="description" content="Portfolio of Tushar, Data Scientist and Machine Learning Engineer. Statistical modeling, AI-driven systems, and NLP with quantified business impact.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232563eb%22/><text x=%2250%22 y=%2270%22 font-family=%22Arial,sans-serif%22 font-size=%2262%22 font-weight=%22800%22 fill=%22white%22 text-anchor=%22middle%22>T</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=16">
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-github" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.535-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405 1.02 0 2.04.135 3 .405 2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></symbol>
+  <symbol id="icon-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+  <symbol id="icon-medium" viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.38-2.88-3.38-6.42s1.51-6.42 3.38-6.42 3.38 2.88 3.38 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></symbol>
+  <symbol id="icon-youtube" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+</svg>
+
+<div class="noise-overlay"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">~/tushar/<span id="navCurrent" class="nav-current">home</span></a>
+    <button id="navToggle" class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div id="tsparticles" class="particle-net" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Hey, I'm</p>
+    <h1 class="hero-name">Tushar</h1>
+    <h2 class="hero-role">Data Scientist <span class="sep">·</span> Machine Learning Engineer</h2>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="assets/Tushar_Resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Resume (PDF)</a>
+      <a href="mailto:tus2025snoop@outlook.com" class="btn btn-ghost">Email me</a>
+    </div>
+    <div class="hero-links">
+      <a href="https://github.com/tus2014ar" target="_blank" rel="noopener"><svg class="social-icon" aria-hidden="true"><use href="#icon-github"/></svg>GitHub</a>
+      <a href="https://www.linkedin.com/in/fnu-tushar-945648131/" target="_blank" rel="noopener"><svg class="social-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a>
+      <a href="https://medium.com/@tusharsingh_37238" target="_blank" rel="noopener"><svg class="social-icon" aria-hidden="true"><use href="#icon-medium"/></svg>Medium</a>
+    </div>
+
+    <div class="terminal" role="img" aria-label="Terminal showing: whoami, printing a short bio &#8212; I ship statistical models and AI-driven systems with real-world impact to production, most recently as a Data Science Intern at Barton Malow, with 5+ years of experience in Data Engineering and Analytics across Oracle and Accenture, currently deepening my data science and machine learning foundations at Penn State; then a CI-gated git workflow: branch, commit, pull request, passing CI check, and merge.">
+      <div class="terminal-bar">
+        <span class="terminal-dot dot-red"></span>
+        <span class="terminal-dot dot-yellow"></span>
+        <span class="terminal-dot dot-green"></span>
+        <span class="terminal-title">tushar@shipit: ~/ai-sentinel</span>
+      </div>
+      <pre class="terminal-body"><code id="terminalOutput"></code><span class="terminal-cursor">&#9608;</span></pre>
+    </div>
+  </div>
+  <div class="hero-scroll-cue" aria-hidden="true">
+    <span></span>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ IMPACT STRIP ============ -->
+  <section class="impact-strip" aria-label="Career highlights">
+    <div class="impact-inner">
+      <div class="impact-item">
+        <span class="impact-number">Top 10</span>
+        <span class="impact-label">of 60+ teams, Penn State Nittany AI Challenge 2026</span>
+      </div>
+      <div class="impact-item">
+        <span class="impact-number">92%</span>
+        <span class="impact-label">forecasting accuracy on historical attendance data at Penn State</span>
+      </div>
+      <div class="impact-item">
+        <span class="impact-number">305K+</span>
+        <span class="impact-label">tweets analyzed in a global LLM sentiment pipeline</span>
+      </div>
+      <div class="impact-item">
+        <span class="impact-number">2,277</span>
+        <span class="impact-label">job descriptions semantically ranked via deep learning</span>
+      </div>
+      <div class="impact-item">
+        <span class="impact-number">10M+</span>
+        <span class="impact-label">billing records validated across telecom pipelines at Oracle</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section id="story" class="section story-section">
+    <div class="section-inner">
+      <p class="section-eyebrow">$ git log --oneline --graph</p>
+      <h2 class="section-title">How I got here</h2>
+      <p class="principles-lede">
+        Five years of turning messy data into statistical evidence set the direction. Every stop
+        since has been about building models and systems that hold up under real scrutiny, not
+        just look good in a notebook.
+      </p>
+
+      <div class="story-log">
+        <article class="story-commit">
+          <span class="commit-hash">7f3a2c1</span>
+          <span class="commit-meta">Accenture · Jun 2019 – Feb 2022</span>
+          <p class="commit-msg">feat: SQL-based data validation framework, -60% discrepancies</p>
+          <p class="commit-detail">First real lesson in production data: a 4.5M-customer billing base doesn't forgive weak validation. Designed row-level checks and reconciliation logic that cut discrepancies 60% and shortened month-end close by 10%.</p>
+        </article>
+        <article class="story-commit">
+          <span class="commit-hash">c9e81b4</span>
+          <span class="commit-meta">Oracle Corporation · Feb 2022 – Dec 2024</span>
+          <p class="commit-msg">feat: anomaly detection at scale, 600K+ subscribers</p>
+          <p class="commit-detail">Moved from fixing issues after the fact to designing the checks that catch them first — anomaly detection and reconciliation holding 98%+ accuracy within SLA. Earned "Best Upcoming Talent," FY23 Q3.</p>
+        </article>
+        <article class="story-commit">
+          <span class="commit-hash">a10d5e7</span>
+          <span class="commit-meta">Penn State Research · Sep 2025 – May 2026</span>
+          <p class="commit-msg">feat: forecasting + agentic auditing, 92% accuracy</p>
+          <p class="commit-detail">Went back to build the theory behind the practice: statistical forecasting models and a first prototype of autonomous agents doing continuous compliance auditing.</p>
+        </article>
+        <article class="story-commit">
+          <span class="commit-hash">f42b901</span>
+          <span class="commit-meta">Barton Malow · May 2026 – Aug 2026</span>
+          <p class="commit-msg">feat: AI cost-attribution analysis, 5.5x growth surfaced</p>
+          <p class="commit-detail">Where the two threads met: quantitative analysis of AI agent costs inside shared compute, and a 211-rule data quality framework shipped to a $159B production pipeline.</p>
+        </article>
+      </div>
+
+      <div class="story-close">
+        The throughline: every role added statistical rigor, first to validation, then to
+        detection, then to forecasting, then to AI-driven analysis. The Barton Malow work is what
+        all four look like combined into one.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ENGINEERING PRINCIPLES ============ -->
+  <section id="principles" class="section principles-section">
+    <div class="section-inner">
+      <p class="section-eyebrow">$ cat PRINCIPLES.md</p>
+      <h2 class="section-title">The pragmatic builder</h2>
+      <p class="principles-subtitle">Everything I build is grounded in a production mindset.</p>
+      <p class="principles-lede">
+        "Understanding existing systems deeply before changing them, designing for the next person who has
+        to maintain my work, and communicating technical findings in a way non-technical stakeholders can
+        act on." That’s the standard I actually build to.
+      </p>
+
+      <div class="principles-grid">
+        <a class="principle-card" href="#ai-sentinel-deep-dive">
+          <span class="principle-mark">01</span>
+          <h4>A model never gets the final say</h4>
+          <p>AI Sentinel pairs its local-LLM explanation layer with a deterministic rule engine and a 100%-deterministic fallback, so a hallucinated inference never becomes an unchecked compliance decision. Every finding is SHA-256 audit-logged, nothing is a black box.</p>
+          <span class="principle-cta">→ see it in AI Sentinel</span>
+        </a>
+        <a class="principle-card" href="#resume-jd-deep-dive">
+          <span class="principle-mark">02</span>
+          <h4>Baseline before complexity</h4>
+          <p>The Resume–JD matching pipeline didn't jump straight to neural re-ranking. It proved out a TF-IDF baseline first, then SBERT embeddings, then supervised refinement, each stage measured against the one before it, so every added layer of complexity earned its place.</p>
+          <span class="principle-cta">→ see it in Resume–JD Matching</span>
+        </a>
+        <a class="principle-card" href="#resume-jd-deep-dive">
+          <span class="principle-mark">03</span>
+          <h4>AI accelerates the analysis, it doesn't replace the validation</h4>
+          <p>SBERT's embeddings accelerate semantic matching far beyond what keyword search alone could do, but every embedding-based match is still validated by the supervised neural layer against labeled outcomes before it becomes a probability score anyone should trust.</p>
+          <span class="principle-cta">→ see it in Resume–JD Matching</span>
+        </a>
+        <a class="principle-card" href="#experience">
+          <span class="principle-mark">04</span>
+          <h4>Data quality is step one, not damage control</h4>
+          <p>The sentiment-analysis pipeline's location-normalization step cut unresolved geography from 72.8% to 43.85% before a single sentiment score was trusted. Cleaning happens before modeling, not after a bad result shows up.</p>
+          <span class="principle-cta">→ see it across Experience</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience" class="section">
+    <div class="section-inner">
+      <p class="section-eyebrow">$ cat experience.log</p>
+      <h2 class="section-title">5+ years turning messy real-world data into models and evidence leadership can act on</h2>
+
+      <div class="timeline">
+
+        <article class="job">
+          <div class="job-head">
+            <div class="job-title-group">
+              <img src="assets/logos/barton-malow.svg" alt="Barton Malow logo" class="job-logo">
+              <div>
+                <h3 class="job-role">Data Science Intern</h3>
+                <p class="job-company">Barton Malow <span class="job-tag">Featured</span></p>
+              </div>
+            </div>
+            <div class="job-meta">
+              <span class="job-date">May 2026 – Aug 2026</span>
+              <span class="job-loc">Michigan, United States</span>
+            </div>
+          </div>
+          <ul class="job-bullets">
+            <li>Applied <strong>quantitative cost-attribution analysis</strong> and an automated ownership-resolution hierarchy across 933 resources on Databricks, surfacing <strong>$142K</strong> in lifetime platform spend and <strong>$13.2K</strong> in idle resource cost across <strong>885 unused objects</strong>, and cutting the unowned-spend gap from <strong>85.6% to 54%</strong>.</li>
+            <li>Built a <strong>Claude AI cost-attribution dashboard</strong> isolating agent query costs from shared Databricks serverless compute (20+ users, 8,000+ queries, $0.53 avg cost/query), revealing AI's share of warehouse spend grew <strong>5.5× in 5 months (1.5% → 8.3%)</strong>, giving leadership real-time cost visibility before it became a budget concern.</li>
+            <li>Built a <strong>211-rule data quality framework</strong> spanning 23 production tables in a <strong>$159B CRM pipeline</strong>, achieving 100% clean execution while using an AI-driven profiler to accelerate rule generation.</li>
+          </ul>
+          <div class="job-skills">
+            <span>Python</span><span>Quantitative Analysis</span><span>Databricks</span><span>PySpark</span><span>SQL</span><span>Claude Code</span>
+          </div>
+          <div class="job-links">
+            <a href="https://github.com/tus2014ar/databricks-cost-analytics" target="_blank" rel="noopener">Cost Analytics repo →</a>
+            <a href="https://github.com/tus2014ar/databricks-data-quality-framework" target="_blank" rel="noopener">DQX repo →</a>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <div class="job-title-group">
+              <img src="assets/logos/penn-state.svg" alt="Pennsylvania State University seal" class="job-logo">
+              <div>
+                <h3 class="job-role">Research Assistant, Data Science</h3>
+                <p class="job-company">Pennsylvania State University</p>
+              </div>
+            </div>
+            <div class="job-meta">
+              <span class="job-date">Sep 2025 – May 2026</span>
+              <span class="job-loc">Pennsylvania, United States</span>
+            </div>
+          </div>
+          <ul class="job-bullets">
+            <li>Developed <strong>statistical forecasting models</strong> on historical attendance data, achieving <strong>92% accuracy</strong> and enabling data-driven vendor allocation and capacity planning.</li>
+            <li>Reduced event planning timeline <strong>83% (12 months → 2 months)</strong> by building data-driven workflows, dashboards, and scenario simulations that aligned stakeholders on constraints and priorities.</li>
+            <li>Prototyped autonomous AI agents for continuous auditing and ethical compliance, including WORM-based audit trails, ontology-driven fairness checks, and cybersecurity safeguards aligned with ISO/IEC 42001.</li>
+          </ul>
+          <div class="job-skills">
+            <span>Statistical Modeling</span><span>Forecasting</span><span>Agentic AI</span><span>Python</span><span>SQL</span>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <div class="job-title-group">
+              <img src="assets/logos/oracle.svg" alt="Oracle Corporation logo" class="job-logo">
+              <div>
+                <h3 class="job-role">Staff Data Consultant</h3>
+                <p class="job-company">Oracle Corporation</p>
+              </div>
+            </div>
+            <div class="job-meta">
+              <span class="job-date">Feb 2022 – Dec 2024</span>
+              <span class="job-loc">Bangalore, India</span>
+            </div>
+          </div>
+          <ul class="job-bullets">
+            <li>Applied <strong>SQL-driven anomaly-detection and reconciliation analysis</strong> across <strong>600K+ telecom subscriber</strong> billing records, maintaining <strong>98%+ accuracy</strong> within SLAs.</li>
+            <li>Built and automated KPI dashboards (churn, usage patterns) with <strong>99% on-time delivery</strong>, enabling leadership to track performance in weekly reviews.</li>
+            <li>Led onsite test efforts, coordinating with offshore analytics teams to deliver readiness dashboards supporting a successful, on-time go-live.</li>
+          </ul>
+          <div class="job-skills">
+            <span>SQL</span><span>Data Analysis</span><span>Oracle Database</span><span>Business Analysis</span>
+          </div>
+          <div class="job-award"><span class="award-badge">Award</span> Oracle "Best Upcoming Talent," FY23 Q3</div>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <div class="job-title-group">
+              <img src="assets/logos/accenture.svg" alt="Accenture logo" class="job-logo">
+              <div>
+                <h3 class="job-role">Data Consultant</h3>
+                <p class="job-company">Accenture Solutions Pvt Ltd</p>
+              </div>
+            </div>
+            <div class="job-meta">
+              <span class="job-date">Jun 2019 – Feb 2022</span>
+              <span class="job-loc">Pune, India</span>
+            </div>
+          </div>
+          <ul class="job-bullets">
+            <li>Identified and resolved <strong>50+ recurring data quality issues</strong> in production billing datasets for a <strong>4.5M-customer</strong> base, improving billing accuracy and customer trust.</li>
+            <li>Automated batch bill-run workflows using SQL scripts and scheduling, cutting processing time from 1 day to 2 hours <strong>(90× faster)</strong> and manual effort by <strong>92%</strong>.</li>
+            <li>Designed a SQL-based data validation framework (row-level checks, reconciliation, exception flags) that reduced discrepancies by <strong>60%</strong> and shortened month-end close by <strong>10%</strong>.</li>
+          </ul>
+          <div class="job-skills">
+            <span>SQL</span><span>Shell Scripting</span><span>Excel</span><span>Client Communication</span>
+          </div>
+          <div class="job-award"><span class="award-badge">Award</span> Accenture "Shared Success Catalyst," Addressing Client &amp; Community Needs</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-eyebrow">$ ls ./projects</p>
+      <h2 class="section-title">Real systems, real numbers</h2>
+
+      <div class="project-grid" id="projectGrid">
+
+        <article class="project-card project-card-flagship">
+          <div class="project-stats">
+            <div><strong>5</strong><span>CMS rules mapped</span></div>
+            <div><strong>Top 10</strong><span>of 60+ teams</span></div>
+            <div><strong>100%</strong><span>deterministic fallback</span></div>
+          </div>
+          <h4>AI Sentinel: Compliance Monitoring</h4>
+          <p>Autonomous compliance agents detecting AI-driven regulatory risk in real time. Top 10 of 60+ teams, Penn State Nittany AI Challenge 2026. Hybrid architecture: deterministic rule engine + local LLM explanation layer with a 100%-deterministic fallback.</p>
+          <div class="project-prod-signals">
+            <span>Every finding SHA-256 audit-logged</span>
+            <span>Deterministic fallback: no unchecked LLM decisions</span>
+          </div>
+          <div class="project-tags"><span>Python</span><span>Streamlit</span><span>Ollama</span><span>Gemini</span></div>
+          <a href="https://github.com/tus2014ar/AI-Sentinel---Automated-AI-Compliance-Monitoring-Platform" target="_blank" rel="noopener" class="project-link">View repo →</a>
+        </article>
+
+        <article class="project-card project-card-flagship">
+          <div class="project-stats">
+            <div><strong>120</strong><span>resumes ranked</span></div>
+            <div><strong>2,277</strong><span>job descriptions</span></div>
+            <div><strong>384-d</strong><span>SBERT embeddings</span></div>
+          </div>
+          <h4>Resume–JD Matching via Deep Learning</h4>
+          <p>3-stage semantic ranking pipeline improving over keyword-based ATS matching: TF-IDF baseline → SBERT semantic embeddings → supervised neural refinement into a calibrated match probability.</p>
+          <div class="project-prod-signals">
+            <span>Baseline before complexity: TF-IDF → SBERT → neural</span>
+            <span>Calibrated probability output, not a raw score</span>
+          </div>
+          <div class="project-tags"><span>Python</span><span>PyTorch</span><span>SBERT</span><span>scikit-learn</span></div>
+          <a href="https://github.com/tus2014ar/Resume-Job-Description-Matching-Using-Deep-Learning" target="_blank" rel="noopener" class="project-link">View repo →</a>
+        </article>
+
+        <article class="project-card">
+          <h4>Worldwide LLM Sentiment Analysis</h4>
+          <p>End-to-end NLP + geospatial pipeline tracking global sentiment toward LLMs across 305K+ tweets. Location-normalization cut unresolved geography from 72.8% to 43.85%.</p>
+          <div class="project-tags"><span>Python</span><span>NLTK/VADER</span><span>Plotly</span></div>
+          <a href="https://github.com/tus2014ar/Worldwide-Sentiment-Analysis-of-LLM-related-tweets" target="_blank" rel="noopener" class="project-link">View repo →</a>
+        </article>
+
+      </div>
+
+      <div class="case-study" id="ai-sentinel-deep-dive">
+        <p class="case-eyebrow">Deep Dive · Penn State Nittany AI Challenge, 2026</p>
+        <h3 class="case-title">AI Sentinel: Automated Compliance Monitoring</h3>
+        <div class="case-pwh">
+          <div class="case-pwh-item">
+            <h4>Problem</h4>
+            <p>Fall-monitoring AI systems can quietly restrict resident movement in ways that violate federal nursing-home regulations, and nobody was watching for it in real time.</p>
+          </div>
+          <div class="case-pwh-item">
+            <h4>Why</h4>
+            <p>A missed compliance risk isn't just a fine, it's a resident's autonomy on the line. And a black-box LLM verdict isn't good enough when the finding has to hold up to an auditor.</p>
+          </div>
+          <div class="case-pwh-item">
+            <h4>How</h4>
+            <p>A hybrid architecture: a deterministic rule engine maps directly to CMS regulations, a local LLM explains each finding in plain language, and a 100%-deterministic fallback means the LLM never gets the final say.</p>
+          </div>
+        </div>
+
+        <div class="case-diagram" role="img" aria-label="Pipeline diagram: fall-monitoring sensor data feeds a deterministic rule engine mapped to 5 CMS regulations, which passes candidate findings to a local LLM explanation layer, gated by a 100%-deterministic fallback check, writing to a SHA-256 audit log, routed to the care team for resolution. A dashed line notes the fallback check runs deterministically, so the LLM never gets the final say.">
+          <svg viewBox="0 0 836 210" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace">
+            <defs>
+              <marker id="ai-sentinel-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 Z" class="case-arrowhead"/>
+              </marker>
+            </defs>
+
+            <rect x="10" y="72" width="116" height="62" rx="6" class="case-node case-node-source"/>
+            <text x="68" y="98" class="case-node-title" text-anchor="middle">Sensor Data</text>
+            <text x="68" y="114" class="case-node-sub" text-anchor="middle">fall-monitoring</text>
+
+            <line x1="126" y1="103" x2="150" y2="103" class="case-edge" marker-end="url(#ai-sentinel-arrow)"/>
+
+            <rect x="150" y="72" width="116" height="62" rx="6" class="case-node case-node-bronze"/>
+            <text x="208" y="98" class="case-node-title case-node-title-bronze" text-anchor="middle">Rule Engine</text>
+            <text x="208" y="114" class="case-node-sub" text-anchor="middle">5 CMS rules</text>
+
+            <line x1="266" y1="103" x2="290" y2="103" class="case-edge" marker-end="url(#ai-sentinel-arrow)"/>
+
+            <rect x="290" y="72" width="116" height="62" rx="6" class="case-node case-node-silver"/>
+            <text x="348" y="98" class="case-node-title case-node-title-silver" text-anchor="middle">LLM Explainer</text>
+            <text x="348" y="114" class="case-node-sub" text-anchor="middle">local, via Ollama</text>
+
+            <line x1="406" y1="103" x2="430" y2="103" class="case-edge" marker-end="url(#ai-sentinel-arrow)"/>
+
+            <rect x="430" y="72" width="116" height="62" rx="6" class="case-node case-node-gold"/>
+            <text x="488" y="98" class="case-node-title case-node-title-gold" text-anchor="middle">Fallback</text>
+            <text x="488" y="114" class="case-node-sub" text-anchor="middle">100% deterministic</text>
+
+            <line x1="546" y1="103" x2="570" y2="103" class="case-edge" marker-end="url(#ai-sentinel-arrow)"/>
+
+            <rect x="570" y="72" width="116" height="62" rx="6" class="case-node case-node-dashboard"/>
+            <text x="628" y="98" class="case-node-title case-node-title-dashboard" text-anchor="middle">Audit Log</text>
+            <text x="628" y="114" class="case-node-sub" text-anchor="middle">SHA-256</text>
+
+            <line x1="686" y1="103" x2="710" y2="103" class="case-edge" marker-end="url(#ai-sentinel-arrow)"/>
+
+            <rect x="710" y="62" width="116" height="82" rx="6" class="case-node case-node-source"/>
+            <text x="768" y="93" class="case-node-title" text-anchor="middle">Care</text>
+            <text x="768" y="107" class="case-node-title" text-anchor="middle">Team</text>
+            <text x="768" y="122" class="case-node-sub" text-anchor="middle">resolve</text>
+
+            <line x1="488" y1="134" x2="488" y2="162" class="case-edge-dashed"/>
+            <text x="488" y="178" class="case-annotation" text-anchor="middle">deterministic fallback: the LLM never gets the final say</text>
+          </svg>
+        </div>
+
+        <div class="case-widgets">
+          <div class="case-widget">
+            <p class="case-widget-label">Findings covered by the deterministic fallback</p>
+            <svg viewBox="0 0 400 40" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace">
+              <rect x="0" y="12" width="400" height="16" rx="8" class="meter-track"/>
+              <rect x="0" y="12" width="400" height="16" rx="8" class="meter-fill"/>
+              <text x="360" y="25" class="meter-label">100%</text>
+            </svg>
+          </div>
+
+          <div class="case-widget monitor-widget" role="img" aria-label="Illustration of the compliance rule engine running continuously against live sensor data, currently active, keeping flagged risk near the clean baseline.">
+            <div class="monitor-head">
+              <span class="monitor-label">Compliance Monitoring</span>
+              <span class="monitor-status"><span class="monitor-dot"></span>Active</span>
+            </div>
+            <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" class="monitor-wave">
+              <line x1="0" y1="75" x2="300" y2="75" class="monitor-baseline"/>
+              <polygon class="monitor-area" points="0,100 0,65 12,58 25,66 37,52 50,60 62,44 75,50 87,38 100,48 112,40 125,54 137,47 150,60 162,52 175,64 187,57 200,70 212,62 225,74 237,67 250,76 262,72 275,80 287,76 300,78 300,100"/>
+              <polyline class="monitor-line" points="0,65 12,58 25,66 37,52 50,60 62,44 75,50 87,38 100,48 112,40 125,54 137,47 150,60 162,52 175,64 187,57 200,70 212,62 225,74 237,67 250,76 262,72 275,80 287,76 300,78"/>
+              <circle cx="300" cy="78" r="4" class="monitor-live-dot"/>
+            </svg>
+            <p class="monitor-caption">5 rules · 2 phases won · every finding audited <span class="monitor-live"><span class="monitor-dot"></span>LIVE</span></p>
+          </div>
+        </div>
+
+        <div class="case-results">
+          <div class="case-result"><span class="case-result-num case-result-gold">5</span><span class="case-result-label">CMS regulations mapped (42 CFR §483)</span></div>
+          <div class="case-result"><span class="case-result-num case-result-bronze">Top 10</span><span class="case-result-label">of 60+ teams, Nittany AI Challenge</span></div>
+          <div class="case-result"><span class="case-result-num case-result-silver">100%</span><span class="case-result-label">deterministic fallback coverage</span></div>
+          <div class="case-result"><span class="case-result-num case-result-gold">2</span><span class="case-result-label">funded phases won (Prototype + MVP)</span></div>
+        </div>
+
+        <p class="case-principle-link">
+          This is where <a href="#principles" class="project-link">principle 01 (a model never gets the final say)</a>
+          isn't an abstraction: every LLM explanation is checked against the deterministic rule engine before it's
+          trusted, and every finding is SHA-256 audit-logged.
+        </p>
+      </div>
+
+      <div class="case-study" id="resume-jd-deep-dive">
+        <p class="case-eyebrow">Deep Dive · Independent Project, 2026</p>
+        <h3 class="case-title">Resume–JD Matching via Deep Learning</h3>
+        <div class="case-pwh">
+          <div class="case-pwh-item">
+            <h4>Problem</h4>
+            <p>Keyword-based ATS matching misses qualified candidates who describe their skills differently than a job description does, and over-ranks resumes that just repeat the right buzzwords.</p>
+          </div>
+          <div class="case-pwh-item">
+            <h4>Why</h4>
+            <p>A ranking system that can't tell semantic fit from keyword-stuffing produces bad shortlists on both ends: real candidates filtered out, weak ones let through.</p>
+          </div>
+          <div class="case-pwh-item">
+            <h4>How</h4>
+            <p>A 3-stage pipeline that only adds complexity when it earns its place: a TF-IDF baseline first, then SBERT semantic embeddings, then a supervised neural layer that outputs a calibrated match probability instead of a raw similarity score.</p>
+          </div>
+        </div>
+
+        <div class="case-diagram" role="img" aria-label="Pipeline diagram: raw resumes and job descriptions flow into a TF-IDF baseline stage, then SBERT semantic embeddings at 384 dimensions, then a supervised neural refinement stage, producing a calibrated match probability. A dashed line notes each stage is measured against the one before it before it earns its place in the pipeline.">
+          <svg viewBox="0 0 706 210" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace">
+            <defs>
+              <marker id="resume-jd-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 Z" class="case-arrowhead"/>
+              </marker>
+            </defs>
+
+            <rect x="10" y="72" width="116" height="62" rx="6" class="case-node case-node-source"/>
+            <text x="68" y="98" class="case-node-title" text-anchor="middle">Resumes</text>
+            <text x="68" y="114" class="case-node-sub" text-anchor="middle">+ JDs, raw text</text>
+
+            <line x1="126" y1="103" x2="150" y2="103" class="case-edge" marker-end="url(#resume-jd-arrow)"/>
+
+            <rect x="150" y="72" width="116" height="62" rx="6" class="case-node case-node-bronze"/>
+            <text x="208" y="98" class="case-node-title case-node-title-bronze" text-anchor="middle">TF-IDF</text>
+            <text x="208" y="114" class="case-node-sub" text-anchor="middle">baseline</text>
+
+            <line x1="266" y1="103" x2="290" y2="103" class="case-edge" marker-end="url(#resume-jd-arrow)"/>
+
+            <rect x="290" y="72" width="116" height="62" rx="6" class="case-node case-node-silver"/>
+            <text x="348" y="98" class="case-node-title case-node-title-silver" text-anchor="middle">SBERT</text>
+            <text x="348" y="114" class="case-node-sub" text-anchor="middle">384-d embeddings</text>
+
+            <line x1="406" y1="103" x2="430" y2="103" class="case-edge" marker-end="url(#resume-jd-arrow)"/>
+
+            <rect x="430" y="72" width="116" height="62" rx="6" class="case-node case-node-gold"/>
+            <text x="488" y="98" class="case-node-title case-node-title-gold" text-anchor="middle">Neural</text>
+            <text x="488" y="114" class="case-node-sub" text-anchor="middle">supervised refine</text>
+
+            <line x1="546" y1="103" x2="570" y2="103" class="case-edge" marker-end="url(#resume-jd-arrow)"/>
+
+            <rect x="570" y="62" width="116" height="82" rx="6" class="case-node case-node-dashboard"/>
+            <text x="628" y="93" class="case-node-title case-node-title-dashboard" text-anchor="middle">Match</text>
+            <text x="628" y="107" class="case-node-title case-node-title-dashboard" text-anchor="middle">Probability</text>
+            <text x="628" y="122" class="case-node-sub" text-anchor="middle">calibrated</text>
+
+            <line x1="348" y1="134" x2="348" y2="162" class="case-edge-dashed"/>
+            <text x="348" y="178" class="case-annotation" text-anchor="middle">each stage measured before it earns its place</text>
+          </svg>
+        </div>
+
+        <div class="case-results">
+          <div class="case-result"><span class="case-result-num case-result-gold">120</span><span class="case-result-label">resumes ranked</span></div>
+          <div class="case-result"><span class="case-result-num case-result-bronze">2,277</span><span class="case-result-label">job descriptions</span></div>
+          <div class="case-result"><span class="case-result-num case-result-silver">3</span><span class="case-result-label">pipeline stages, each measured before the next</span></div>
+          <div class="case-result"><span class="case-result-num case-result-gold">384-d</span><span class="case-result-label">dense embeddings (all-MiniLM-L6-v2)</span></div>
+        </div>
+
+        <p class="case-principle-link">
+          This is where <a href="#principles" class="project-link">principles 02 (baseline before complexity) and 03
+          (AI accelerates the analysis, it doesn't replace the validation)</a> aren't abstractions: TF-IDF proved the
+          floor, SBERT proved the ceiling was higher, and every embedding-based match still had to earn its place
+          against a supervised, labeled baseline before it became a trusted probability.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH & RECOGNITION ============ -->
+  <section id="research" class="section">
+    <div class="section-inner">
+      <p class="section-eyebrow">$ cat research.md</p>
+      <h2 class="section-title">Published work and competitive recognition</h2>
+
+      <div class="research-grid">
+        <article class="research-card">
+          <span class="research-kicker">Published Paper · Springer Nature</span>
+          <h3>Autonomous Multi-Agent Governance: AI Sentinel Framework for Mitigating Psychological Restraints in AI-Driven Fall Management</h3>
+          <p>Accepted and presented at <strong>SEET 2026</strong> (2nd International Conference on Software Engineering of Emerging Technologies), Penn State Behrend, PhD Research Track. Listed on page 76 of the conference abstract book. To be published in the official conference proceedings by Springer Nature.</p>
+          <a href="https://seet26.sw-conf.com/" target="_blank" rel="noopener" class="project-link">View conference →</a>
+        </article>
+
+        <article class="research-card">
+          <span class="research-kicker">Competition · Penn State Nittany AI Challenge 2026</span>
+          <h3>AI Sentinel: Top 10 of 60+ Teams</h3>
+          <p>Won the Prototype Phase and MVP Phase, advanced through funded phases to a Top 10 finish at the Pitch Contest, Hintz Family Alumni Center, University Park.</p>
+        </article>
+
+        <article class="research-card">
+          <span class="research-kicker">Award · Oracle Corporation</span>
+          <h3>"Best Upcoming Talent" (FY23 Q3)</h3>
+          <p>Recognized for exceptional contributions and high-impact performance on the Telia Company billing analytics engagement.</p>
+        </article>
+
+        <article class="research-card">
+          <span class="research-kicker">Leadership · Penn State University</span>
+          <h3>Student Senator</h3>
+          <p>Representing students in discussions with university leadership; championing AI literacy and equitable AI access across Penn State's Commonwealth Caucus.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-eyebrow">$ cat skills.yaml</p>
+      <h2 class="section-title">Tools I actually ship with</h2>
+
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>ML & Statistics</h4>
+          <p>Regression · Classification · Clustering · NLP · Time Series Forecasting · Feature Engineering · Model Evaluation (AUC, F1)</p>
+        </div>
+        <div class="skill-group">
+          <h4>Programming</h4>
+          <p>Python (Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, TensorFlow, PyTorch, Keras) · SQL · R · Java</p>
+        </div>
+        <div class="skill-group">
+          <h4>AI Tools</h4>
+          <p>Claude Code · Claude Cowork · Claude Skills · Claude Projects · Claude MCP · ChatGPT · GitHub Copilot · Cursor IDE · Perplexity · Ollama · Google Gemini · Julius AI</p>
+        </div>
+        <div class="skill-group">
+          <h4>BI & Visualization</h4>
+          <p>Tableau · Power BI · Plotly · Matplotlib · Seaborn</p>
+        </div>
+        <div class="skill-group">
+          <h4>Data Engineering & Cloud</h4>
+          <p>Databricks · PySpark · Unity Catalog · Azure · AWS · Oracle Database · PostgreSQL · PL/SQL</p>
+        </div>
+        <div class="skill-group">
+          <h4>Dev Tools</h4>
+          <p>Git · GitHub Actions · Jupyter · Jira</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education" class="section">
+    <div class="section-inner">
+      <p class="section-eyebrow">$ cat education.log</p>
+      <h2 class="section-title">Background</h2>
+
+      <div class="edu-grid">
+        <article class="edu-card">
+          <div class="edu-head">
+            <h3>Pennsylvania State University</h3>
+            <span class="edu-date">Aug 2025 – Dec 2026</span>
+          </div>
+          <p class="edu-degree">Master of Data Analytics · GPA 3.96/4</p>
+          <p class="edu-detail">Statistical Analysis, Data-Driven Decision Making, Predictive Analytics, Deep Learning, Natural Language Processing.</p>
+        </article>
+
+        <article class="edu-card">
+          <div class="edu-head">
+            <h3>KIIT University</h3>
+            <span class="edu-date">May 2015 – May 2019</span>
+          </div>
+          <p class="edu-degree">B.Tech, Electronics & Instrumentation Engineering · GPA 3.3/4</p>
+          <p class="edu-detail">Control Systems, Digital Electronics, OOP, Data Structures & Algorithms, Web Technology, Artificial Intelligence.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section contact-section">
+    <div class="section-inner contact-inner">
+      <p class="section-eyebrow">$ mail tushar</p>
+      <h2 class="section-title">Let's build something that ships.</h2>
+      <p class="contact-sub">Open to full-time Data Scientist / Machine Learning Engineer roles starting Dec 2026.</p>
+      <div class="contact-actions">
+        <a href="mailto:tus2025snoop@outlook.com" class="btn btn-primary">tus2025snoop@outlook.com</a>
+        <a href="assets/Tushar_Resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener">Download Resume</a>
+      </div>
+      <div class="contact-links">
+        <a href="https://github.com/tus2014ar" target="_blank" rel="noopener"><svg class="social-icon" aria-hidden="true"><use href="#icon-github"/></svg>GitHub</a>
+        <a href="https://www.linkedin.com/in/fnu-tushar-945648131/" target="_blank" rel="noopener"><svg class="social-icon" aria-hidden="true"><use href="#icon-linkedin"/></svg>LinkedIn</a>
+        <a href="https://medium.com/@tusharsingh_37238" target="_blank" rel="noopener"><svg class="social-icon" aria-hidden="true"><use href="#icon-medium"/></svg>Medium</a>
+        <a href="https://www.youtube.com/@corporateaspirant8965" target="_blank" rel="noopener"><svg class="social-icon" aria-hidden="true"><use href="#icon-youtube"/></svg>YouTube</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Tushar. Built with statistical rigor.</p>
+</footer>
+
+<script src="script.js?v=10" defer></script>
+</body>
+</html>
