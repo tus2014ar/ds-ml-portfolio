@@ -309,7 +309,7 @@ if (termOut) {
   }
 }
 
-// ============ DQX live monitor: scrolling telemetry waveform ============
+// ============ Live monitor: scrolling telemetry waveform ============
 // The static polyline/polygon already in the HTML is a real, complete
 // waveform on its own — if this script never runs (or reduced-motion is
 // set), the widget just stays on that static shape. This only makes it

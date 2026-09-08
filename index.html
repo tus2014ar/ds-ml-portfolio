@@ -171,11 +171,11 @@
           <p>The Resume–JD matching pipeline didn't jump straight to neural re-ranking. It proved out a TF-IDF baseline first, then SBERT embeddings, then supervised refinement, each stage measured against the one before it, so every added layer of complexity earned its place.</p>
           <span class="principle-cta">→ see it in Resume–JD Matching</span>
         </a>
-        <a class="principle-card" href="#ai-sentinel-deep-dive">
+        <a class="principle-card" href="#resume-jd-deep-dive">
           <span class="principle-mark">03</span>
           <h4>AI accelerates the analysis, it doesn't replace the validation</h4>
-          <p>DQX's AI-driven profiler speeds up how fast I can generate candidate rules, but every rule still gets validated against real data before it ships, the same discipline that caught a 2x measurement error in an AI-cost methodology before it reached a dashboard.</p>
-          <span class="principle-cta">→ see it in AI Sentinel</span>
+          <p>SBERT's embeddings accelerate semantic matching far beyond what keyword search alone could do, but every embedding-based match is still validated by the supervised neural layer against labeled outcomes before it becomes a probability score anyone should trust.</p>
+          <span class="principle-cta">→ see it in Resume–JD Matching</span>
         </a>
         <a class="principle-card" href="#experience">
           <span class="principle-mark">04</span>
@@ -449,10 +449,9 @@
         </div>
 
         <p class="case-principle-link">
-          This is where <a href="#principles" class="project-link">principles 01 (a model never gets the final say) and
-          03 (AI accelerates the analysis, it doesn't replace the validation)</a> aren't abstractions: every LLM
-          explanation is checked against the deterministic rule engine before it's trusted, and every finding is
-          SHA-256 audit-logged.
+          This is where <a href="#principles" class="project-link">principle 01 (a model never gets the final say)</a>
+          isn't an abstraction: every LLM explanation is checked against the deterministic rule engine before it's
+          trusted, and every finding is SHA-256 audit-logged.
         </p>
       </div>
 
@@ -524,9 +523,10 @@
         </div>
 
         <p class="case-principle-link">
-          This is where <a href="#principles" class="project-link">principle 02 (baseline before complexity)</a> isn't
-          an abstraction: TF-IDF proved the floor, SBERT proved the ceiling was higher, and only then did a supervised
-          neural layer earn its place.
+          This is where <a href="#principles" class="project-link">principles 02 (baseline before complexity) and 03
+          (AI accelerates the analysis, it doesn't replace the validation)</a> aren't abstractions: TF-IDF proved the
+          floor, SBERT proved the ceiling was higher, and every embedding-based match still had to earn its place
+          against a supervised, labeled baseline before it became a trusted probability.
         </p>
       </div>
     </div>
