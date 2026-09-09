@@ -216,9 +216,8 @@ if (termOut) {
       output: [
         { t: 'I ship statistical models and AI-driven systems with real-world impact to' },
         { t: 'production, most recently as a Data Science Intern at Barton Malow.' },
-        { t: '5+ years of corporate experience in Data Engineering and Analytics' },
-        { t: 'across Oracle and Accenture, currently deepening my data science and' },
-        { t: 'machine learning foundations at Penn State.' },
+        { t: '5+ years of corporate experience across Oracle and Accenture, currently' },
+        { t: 'deepening my data science and machine learning foundations at Penn State.' },
       ],
     },
     {
