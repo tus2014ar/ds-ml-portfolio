@@ -82,8 +82,8 @@
         <span class="impact-label">of 60+ teams, Penn State Nittany AI Challenge 2026</span>
       </div>
       <div class="impact-item">
-        <span class="impact-number">92%</span>
-        <span class="impact-label">forecasting accuracy on historical attendance data at Penn State</span>
+        <span class="impact-number">96%</span>
+        <span class="impact-label">accuracy matching RA candidates to research projects at Penn State</span>
       </div>
       <div class="impact-item">
         <span class="impact-number">305K+</span>
@@ -91,7 +91,7 @@
       </div>
       <div class="impact-item">
         <span class="impact-number">2,277</span>
-        <span class="impact-label">job descriptions semantically ranked via deep learning</span>
+        <span class="impact-label">projects semantically ranked via TF-IDF, SBERT, and neural refinement</span>
       </div>
       <div class="impact-item">
         <span class="impact-number">10M+</span>
@@ -127,20 +127,20 @@
         <article class="story-commit">
           <span class="commit-hash">a10d5e7</span>
           <span class="commit-meta">Penn State Research · Sep 2025 – May 2026</span>
-          <p class="commit-msg">feat: forecasting + agentic auditing, 92% accuracy</p>
-          <p class="commit-detail">Went back to build the theory behind the practice: statistical forecasting models and a first prototype of autonomous agents doing continuous compliance auditing.</p>
+          <p class="commit-msg">feat: resume-matching model + compliance engine, 96% accuracy</p>
+          <p class="commit-detail">Went back to build the theory behind the practice: a TF-IDF → SBERT → neural refinement pipeline for candidate screening, and a deterministic compliance engine auditing AI fall-monitoring technology against 5 CMS-mapped thresholds.</p>
         </article>
         <article class="story-commit">
           <span class="commit-hash">f42b901</span>
           <span class="commit-meta">Barton Malow · May 2026 – Aug 2026</span>
-          <p class="commit-msg">feat: AI cost-attribution analysis, 5.5x growth surfaced</p>
-          <p class="commit-detail">Where the two threads met: quantitative analysis of AI agent costs inside shared compute, and a 211-rule data quality framework shipped to a $159B production pipeline.</p>
+          <p class="commit-msg">feat: OLS spend forecasting + AI cost-attribution, 5.5x growth surfaced</p>
+          <p class="commit-detail">Where the two threads met: an OLS-regression model projecting $53K-$57K in annual spend, and a 211-check LLM-assisted rule pipeline flagging 11k records across 23 tables.</p>
         </article>
       </div>
 
       <div class="story-close">
         The throughline: every role added statistical rigor, first to validation, then to
-        detection, then to forecasting, then to AI-driven analysis. The Barton Malow work is what
+        detection, then to modeling, then to AI-driven analysis. The Barton Malow work is what
         all four look like combined into one.
       </div>
     </div>
@@ -210,12 +210,12 @@
             </div>
           </div>
           <ul class="job-bullets">
-            <li>Applied <strong>quantitative cost-attribution analysis</strong> and an automated ownership-resolution hierarchy across 933 resources on Databricks, surfacing <strong>$142K</strong> in lifetime platform spend and <strong>$13.2K</strong> in idle resource cost across <strong>885 unused objects</strong>, and cutting the unowned-spend gap from <strong>85.6% to 54%</strong>.</li>
-            <li>Built a <strong>Claude AI cost-attribution dashboard</strong> isolating agent query costs from shared Databricks serverless compute (20+ users, 8,000+ queries, $0.53 avg cost/query), revealing AI's share of warehouse spend grew <strong>5.5× in 5 months (1.5% → 8.3%)</strong>, giving leadership real-time cost visibility before it became a budget concern.</li>
-            <li>Built a <strong>211-rule data quality framework</strong> spanning 23 production tables in a <strong>$159B CRM pipeline</strong>, achieving 100% clean execution while using an AI-driven profiler to accelerate rule generation.</li>
+            <li>Automated an <strong>OLS-regression model</strong> on 3 years of Databricks Unity Catalog billing data, projecting <strong>$53K–$57K</strong> annual spend and flagging <strong>$11.6K</strong> in idle infrastructure while cutting unowned spend <strong>85.6% to 54%</strong>.</li>
+            <li>Conducted <strong>EDA and trend analysis</strong> on Claude AI query logs across 20+ users and 8,000+ queries on shared Databricks compute, revealing a <strong>5.5x growth</strong> in AI's warehouse-spend share (1.5% to 8.3%) in 5 months.</li>
+            <li>Built an <strong>LLM-assisted rule-authoring pipeline</strong> across 23 production tables, root-causing a 39% completeness bug that was silently causing dashboards to underreport, and scaling to <strong>211 checks</strong> flagging <strong>11k records</strong>.</li>
           </ul>
           <div class="job-skills">
-            <span>Python</span><span>Quantitative Analysis</span><span>Databricks</span><span>PySpark</span><span>SQL</span><span>Claude Code</span>
+            <span>Databricks</span><span>Statistical Forecasting</span><span>Prompt Engineering</span><span>PySpark</span><span>Python</span><span>SQL</span><span>Claude Code</span>
           </div>
           <div class="job-links">
             <a href="https://github.com/tus2014ar/databricks-cost-analytics" target="_blank" rel="noopener">Cost Analytics repo →</a>
@@ -238,12 +238,11 @@
             </div>
           </div>
           <ul class="job-bullets">
-            <li>Developed <strong>statistical forecasting models</strong> on historical attendance data, achieving <strong>92% accuracy</strong> and enabling data-driven vendor allocation and capacity planning.</li>
-            <li>Reduced event planning timeline <strong>83% (12 months → 2 months)</strong> by building data-driven workflows, dashboards, and scenario simulations that aligned stakeholders on constraints and priorities.</li>
-            <li>Prototyped autonomous AI agents for continuous auditing and ethical compliance, including WORM-based audit trails, ontology-driven fairness checks, and cybersecurity safeguards aligned with ISO/IEC 42001.</li>
+            <li>Developed a <strong>resume-to-research-fit matching model</strong> (TF-IDF → SBERT → Neural Refinement) for RA candidate screening, improving match quality <strong>122%</strong> and reaching <strong>96% accuracy</strong> across 120 resumes and 2,277 projects.</li>
+            <li>Architected a <strong>deterministic compliance engine</strong> auditing MyRaina's AI fall-monitoring technology, using Gemini Pro 3.1 to derive 5 CMS-mapped thresholds explained in plain English via a local Llama 3 layer.</li>
           </ul>
           <div class="job-skills">
-            <span>Statistical Modeling</span><span>Forecasting</span><span>Agentic AI</span><span>Python</span><span>SQL</span>
+            <span>SBERT</span><span>PyTorch</span><span>NLP</span><span>LLM Integration</span><span>Python</span><span>SQL</span>
           </div>
         </article>
 
@@ -262,12 +261,12 @@
             </div>
           </div>
           <ul class="job-bullets">
-            <li>Applied <strong>SQL-driven anomaly-detection and reconciliation analysis</strong> across <strong>600K+ telecom subscriber</strong> billing records, maintaining <strong>98%+ accuracy</strong> within SLAs.</li>
-            <li>Built and automated KPI dashboards (churn, usage patterns) with <strong>99% on-time delivery</strong>, enabling leadership to track performance in weekly reviews.</li>
-            <li>Led onsite test efforts, coordinating with offshore analytics teams to deliver readiness dashboards supporting a successful, on-time go-live.</li>
+            <li>Validated <strong>end-to-end billing data pipelines</strong> for <strong>600K+ telecom subscribers</strong> using SQL-driven data quality checks, anomaly detection rules, and reconciliation reports, ensuring <strong>98%+ accuracy</strong> within SLAs.</li>
+            <li>Built and automated KPI dashboards (churn, usage patterns) with <strong>99% on-time delivery</strong>, enabling leadership to track performance and make data-driven decisions in weekly reviews.</li>
+            <li>Led onsite test efforts for a <strong>15-member team</strong> across a 1-month go-live window, building client trust by tracking and presenting a declining post-launch bug trend.</li>
           </ul>
           <div class="job-skills">
-            <span>SQL</span><span>Data Analysis</span><span>Oracle Database</span><span>Business Analysis</span>
+            <span>Oracle Database</span><span>Analytical Skills</span><span>Excel-Based Statistical Analysis</span><span>Strategic Communications</span>
           </div>
           <div class="job-award"><span class="award-badge">Award</span> Oracle "Best Upcoming Talent," FY23 Q3</div>
         </article>
@@ -292,7 +291,7 @@
             <li>Designed a SQL-based data validation framework (row-level checks, reconciliation, exception flags) that reduced discrepancies by <strong>60%</strong> and shortened month-end close by <strong>10%</strong>.</li>
           </ul>
           <div class="job-skills">
-            <span>SQL</span><span>Shell Scripting</span><span>Excel</span><span>Client Communication</span>
+            <span>Python</span><span>SQL</span><span>Shell Scripting</span><span>Data Analysis</span><span>Excel</span><span>Client Communication</span>
           </div>
           <div class="job-award"><span class="award-badge">Award</span> Accenture "Shared Success Catalyst," Addressing Client &amp; Community Needs</div>
         </article>
@@ -316,23 +315,23 @@
             <div><strong>100%</strong><span>deterministic fallback</span></div>
           </div>
           <h4>AI Sentinel: Compliance Monitoring</h4>
-          <p>Autonomous compliance agents detecting AI-driven regulatory risk in real time. Top 10 of 60+ teams, Penn State Nittany AI Challenge 2026. Hybrid architecture: deterministic rule engine + local LLM explanation layer with a 100%-deterministic fallback.</p>
+          <p>Autonomous compliance agents detecting AI-driven regulatory risk in real time. Top 10 of 60+ teams, Penn State Nittany AI Challenge 2026. Deterministic rule engine derives 5 CMS-mapped thresholds via Gemini Pro 3.1, explained in plain English through a local Llama 3 layer.</p>
           <div class="project-prod-signals">
             <span>Every finding SHA-256 audit-logged</span>
             <span>Deterministic fallback: no unchecked LLM decisions</span>
           </div>
-          <div class="project-tags"><span>Python</span><span>Streamlit</span><span>Ollama</span><span>Gemini</span></div>
+          <div class="project-tags"><span>Python</span><span>Streamlit</span><span>Gemini Pro 3.1</span><span>Llama 3</span></div>
           <a href="https://github.com/tus2014ar/AI-Sentinel---Automated-AI-Compliance-Monitoring-Platform" target="_blank" rel="noopener" class="project-link">View repo →</a>
         </article>
 
         <article class="project-card project-card-flagship">
           <div class="project-stats">
-            <div><strong>120</strong><span>resumes ranked</span></div>
-            <div><strong>2,277</strong><span>job descriptions</span></div>
-            <div><strong>384-d</strong><span>SBERT embeddings</span></div>
+            <div><strong>96%</strong><span>accuracy</span></div>
+            <div><strong>122%</strong><span>match quality gain</span></div>
+            <div><strong>2,277</strong><span>projects ranked</span></div>
           </div>
           <h4>Resume–JD Matching via Deep Learning</h4>
-          <p>3-stage semantic ranking pipeline improving over keyword-based ATS matching: TF-IDF baseline → SBERT semantic embeddings → supervised neural refinement into a calibrated match probability.</p>
+          <p>3-stage semantic ranking pipeline built for RA candidate screening at Penn State: TF-IDF baseline → SBERT semantic embeddings → supervised neural refinement, reaching 96% accuracy across 120 resumes and 2,277 projects.</p>
           <div class="project-prod-signals">
             <span>Baseline before complexity: TF-IDF → SBERT → neural</span>
             <span>Calibrated probability output, not a raw score</span>
@@ -364,11 +363,11 @@
           </div>
           <div class="case-pwh-item">
             <h4>How</h4>
-            <p>A hybrid architecture: a deterministic rule engine maps directly to CMS regulations, a local LLM explains each finding in plain language, and a 100%-deterministic fallback means the LLM never gets the final say.</p>
+            <p>A hybrid architecture: a deterministic rule engine derives 5 CMS-mapped thresholds via Gemini Pro 3.1, a local Llama 3 layer explains each finding in plain language, and a 100%-deterministic fallback means the LLM never gets the final say.</p>
           </div>
         </div>
 
-        <div class="case-diagram" role="img" aria-label="Pipeline diagram: fall-monitoring sensor data feeds a deterministic rule engine mapped to 5 CMS regulations, which passes candidate findings to a local LLM explanation layer, gated by a 100%-deterministic fallback check, writing to a SHA-256 audit log, routed to the care team for resolution. A dashed line notes the fallback check runs deterministically, so the LLM never gets the final say.">
+        <div class="case-diagram" role="img" aria-label="Pipeline diagram: fall-monitoring sensor data feeds a deterministic rule engine mapped to 5 CMS regulations via Gemini Pro 3.1, which passes candidate findings to a local Llama 3 explanation layer, gated by a 100%-deterministic fallback check, writing to a SHA-256 audit log, routed to the care team for resolution. A dashed line notes the fallback check runs deterministically, so the LLM never gets the final say.">
           <svg viewBox="0 0 836 210" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace">
             <defs>
               <marker id="ai-sentinel-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
@@ -390,7 +389,7 @@
 
             <rect x="290" y="72" width="116" height="62" rx="6" class="case-node case-node-silver"/>
             <text x="348" y="98" class="case-node-title case-node-title-silver" text-anchor="middle">LLM Explainer</text>
-            <text x="348" y="114" class="case-node-sub" text-anchor="middle">local, via Ollama</text>
+            <text x="348" y="114" class="case-node-sub" text-anchor="middle">local Llama 3</text>
 
             <line x1="406" y1="103" x2="430" y2="103" class="case-edge" marker-end="url(#ai-sentinel-arrow)"/>
 
@@ -456,12 +455,12 @@
       </div>
 
       <div class="case-study" id="resume-jd-deep-dive">
-        <p class="case-eyebrow">Deep Dive · Independent Project, 2026</p>
+        <p class="case-eyebrow">Deep Dive · Penn State Research Assistant, 2026</p>
         <h3 class="case-title">Resume–JD Matching via Deep Learning</h3>
         <div class="case-pwh">
           <div class="case-pwh-item">
             <h4>Problem</h4>
-            <p>Keyword-based ATS matching misses qualified candidates who describe their skills differently than a job description does, and over-ranks resumes that just repeat the right buzzwords.</p>
+            <p>Screening RA candidates by keyword matching misses people who describe their skills differently than a project listing does, and over-ranks resumes that just repeat the right buzzwords.</p>
           </div>
           <div class="case-pwh-item">
             <h4>Why</h4>
@@ -469,11 +468,11 @@
           </div>
           <div class="case-pwh-item">
             <h4>How</h4>
-            <p>A 3-stage pipeline that only adds complexity when it earns its place: a TF-IDF baseline first, then SBERT semantic embeddings, then a supervised neural layer that outputs a calibrated match probability instead of a raw similarity score.</p>
+            <p>A 3-stage pipeline that only adds complexity when it earns its place: a TF-IDF baseline first, then SBERT semantic embeddings, then a supervised neural layer that outputs a calibrated match probability instead of a raw similarity score, reaching 96% accuracy across 120 resumes and 2,277 projects.</p>
           </div>
         </div>
 
-        <div class="case-diagram" role="img" aria-label="Pipeline diagram: raw resumes and job descriptions flow into a TF-IDF baseline stage, then SBERT semantic embeddings at 384 dimensions, then a supervised neural refinement stage, producing a calibrated match probability. A dashed line notes each stage is measured against the one before it before it earns its place in the pipeline.">
+        <div class="case-diagram" role="img" aria-label="Pipeline diagram: raw resumes and research project listings flow into a TF-IDF baseline stage, then SBERT semantic embeddings at 384 dimensions, then a supervised neural refinement stage, producing a calibrated match probability. A dashed line notes each stage is measured against the one before it before it earns its place in the pipeline.">
           <svg viewBox="0 0 706 210" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace">
             <defs>
               <marker id="resume-jd-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
@@ -516,9 +515,9 @@
         </div>
 
         <div class="case-results">
-          <div class="case-result"><span class="case-result-num case-result-gold">120</span><span class="case-result-label">resumes ranked</span></div>
-          <div class="case-result"><span class="case-result-num case-result-bronze">2,277</span><span class="case-result-label">job descriptions</span></div>
-          <div class="case-result"><span class="case-result-num case-result-silver">3</span><span class="case-result-label">pipeline stages, each measured before the next</span></div>
+          <div class="case-result"><span class="case-result-num case-result-gold">96%</span><span class="case-result-label">matching accuracy</span></div>
+          <div class="case-result"><span class="case-result-num case-result-bronze">122%</span><span class="case-result-label">improvement in match quality</span></div>
+          <div class="case-result"><span class="case-result-num case-result-silver">2,277</span><span class="case-result-label">projects ranked against 120 resumes</span></div>
           <div class="case-result"><span class="case-result-num case-result-gold">384-d</span><span class="case-result-label">dense embeddings (all-MiniLM-L6-v2)</span></div>
         </div>
 
@@ -576,23 +575,19 @@
       <div class="skills-grid">
         <div class="skill-group">
           <h4>ML & Statistics</h4>
-          <p>Regression · Classification · Clustering · NLP · Time Series Forecasting · Feature Engineering · Model Evaluation (AUC, F1)</p>
+          <p>Regression · Classification · Clustering · NLP · Time Series Forecasting · Feature Engineering · Model Evaluation (AUC-ROC, F1)</p>
         </div>
         <div class="skill-group">
           <h4>Programming</h4>
           <p>Python (Pandas, NumPy, Matplotlib, Seaborn, scikit-learn, TensorFlow, PyTorch, Keras) · SQL · R · Java</p>
         </div>
         <div class="skill-group">
-          <h4>AI Tools</h4>
-          <p>Claude Code · Claude Cowork · Claude Skills · Claude Projects · Claude MCP · ChatGPT · GitHub Copilot · Cursor IDE · Perplexity · Ollama · Google Gemini · Julius AI</p>
+          <h4>AI Productivity Tools</h4>
+          <p>ChatGPT · Julius AI · Cursor IDE · Perplexity AI · Claude Code · GitHub MCP · Claude Skills</p>
         </div>
         <div class="skill-group">
-          <h4>BI & Visualization</h4>
-          <p>Tableau · Power BI · Plotly · Matplotlib · Seaborn</p>
-        </div>
-        <div class="skill-group">
-          <h4>Data Engineering & Cloud</h4>
-          <p>Databricks · PySpark · Unity Catalog · Azure · AWS · Oracle Database · PostgreSQL · PL/SQL</p>
+          <h4>Data Tools & Cloud</h4>
+          <p>Databricks · PySpark · Tableau · Advanced Excel · AWS · GitHub</p>
         </div>
         <div class="skill-group">
           <h4>Dev Tools</h4>
