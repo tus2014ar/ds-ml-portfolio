@@ -929,6 +929,11 @@ img, svg { max-width: 100%; display: block; }
   border-top: 1px solid var(--border);
   padding-top: 20px;
 }
+.case-press {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin-top: 14px;
+}
 
 /* ============ FLAGSHIP VISUAL WIDGETS: meter / dumbbell / trend ============ */
 .case-widgets {
