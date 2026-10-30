@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=18">
+<link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
 
@@ -165,11 +165,11 @@
           <p>AI Sentinel pairs its local-LLM explanation layer with a deterministic rule engine and a 100%-deterministic fallback, so a hallucinated inference never becomes an unchecked compliance decision. Every finding is SHA-256 audit-logged, nothing is a black box.</p>
           <span class="principle-cta">→ see it in AI Sentinel</span>
         </a>
-        <a class="principle-card" href="#resume-jd-deep-dive">
+        <a class="principle-card" href="#oa-market-deep-dive">
           <span class="principle-mark">02</span>
           <h4>Baseline before complexity</h4>
-          <p>The Resume–JD matching pipeline didn't jump straight to neural re-ranking. It proved out a TF-IDF baseline first, then SBERT embeddings, then supervised refinement, each stage measured against the one before it, so every added layer of complexity earned its place.</p>
-          <span class="principle-cta">→ see it in Resume–JD Matching</span>
+          <p>In the osteoarthritis forecasting capstone, every model had to beat "same as last month" under rules written before any model ran. For the national number none of three did, so the simple rule stayed. The Resume–JD pipeline follows the same habit: TF-IDF first, then SBERT, each stage measured against the one before.</p>
+          <span class="principle-cta">→ see it in the OA capstone</span>
         </a>
         <a class="principle-card" href="#resume-jd-deep-dive">
           <span class="principle-mark">03</span>
@@ -310,6 +310,23 @@
 
         <article class="project-card project-card-flagship">
           <div class="project-stats">
+            <div><strong>7.19M+</strong><span>visits analyzed</span></div>
+            <div><strong>171</strong><span>public datasets</span></div>
+            <div><strong>46</strong><span>walk-forward test months</span></div>
+          </div>
+          <h4>Osteoarthritis Market Share Forecasting Pipeline</h4>
+          <p>Penn State DAAN 888 capstone (team project). Can anyone forecast a branded osteoarthritis injection's share of doctor visits, and can the data be trusted? IQVIA visit data plus 171 public files in a Bronze/Silver/Gold warehouse, 7 leakage-tested feature groups, and models held to simple baselines under rules written before any model ran.</p>
+          <div class="project-prod-signals">
+            <span>Pre-registered rules: null results reported as nulls</span>
+            <span>Found the visit data disagreed with company sales</span>
+          </div>
+          <div class="project-tags"><span>Python</span><span>SQLite</span><span>scikit-learn</span><span>statsmodels</span></div>
+          <a href="#oa-market-deep-dive" class="project-link">See the findings →</a>
+          <a href="https://github.com/tus2014ar/oa-market-intelligence-system" target="_blank" rel="noopener" class="project-link">View repo →</a>
+        </article>
+
+        <article class="project-card project-card-flagship">
+          <div class="project-stats">
             <div><strong>5</strong><span>CMS rules mapped</span></div>
             <div><strong>Top 10</strong><span>of 60+ teams</span></div>
             <div><strong>100%</strong><span>deterministic fallback</span></div>
@@ -347,6 +364,181 @@
           <a href="https://github.com/tus2014ar/Worldwide-Sentiment-Analysis-of-LLM-related-tweets" target="_blank" rel="noopener" class="project-link">View repo →</a>
         </article>
 
+      </div>
+
+      <div class="case-study" id="oa-market-deep-dive">
+        <p class="case-eyebrow">Deep Dive · Penn State DAAN 888 Capstone, 2026 · team project</p>
+        <h3 class="case-title">Osteoarthritis Market Share Forecasting Pipeline</h3>
+        <p class="oa-plain"><strong>In plain English:</strong> a drug company's sales were growing, but the market data said doctors were prescribing its osteoarthritis injection far less. I tested whether anyone can forecast that trend, and found out first that the data itself could not be fully trusted.</p>
+
+        <div class="case-pwh">
+          <div class="case-pwh-item">
+            <h4>Problem</h4>
+            <p>A brand manager selling an osteoarthritis injection (Zilretta) needs an early signal when competing steroid and NSAID treatments take doctor-visit share. The one market dataset (IQVIA visit counts) disagreed with the company's own sales.</p>
+          </div>
+          <div class="case-pwh-item">
+            <h4>Why</h4>
+            <p>A sales target or forecast built on a number that may be wrong is worse than no forecast. Before predicting anything, the work had to show whether the data and the models could be trusted.</p>
+          </div>
+          <div class="case-pwh-item">
+            <h4>How</h4>
+            <p>A Bronze/Silver/Gold SQLite warehouse over 72 months of IQVIA visits and 171 public CMS, CDC, SEC and FDA files, 7 leakage-tested feature groups, then models held to simple rules in walk-forward testing (about 46 test months). The pass/fail rules were written before any model ran.</p>
+          </div>
+        </div>
+
+        <div class="case-diagram" role="img" aria-label="Pipeline diagram: IQVIA visit data and 171 public files flow into a Bronze, Silver, Gold SQLite warehouse, then into 7 leakage-tested feature groups, then into models compared against simple baselines in walk-forward testing, producing findings and recommendations. A dashed line notes the pass and fail rules were written before any model ran.">
+          <svg viewBox="0 0 696 210" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace">
+            <defs>
+              <marker id="oa-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 Z" class="case-arrowhead"/>
+              </marker>
+            </defs>
+
+            <rect x="10" y="72" width="116" height="62" rx="6" class="case-node case-node-source"/>
+            <text x="68" y="98" class="case-node-title" text-anchor="middle">Raw Data</text>
+            <text x="68" y="114" class="case-node-sub" text-anchor="middle">IQVIA + 171 files</text>
+
+            <line x1="126" y1="103" x2="150" y2="103" class="case-edge" marker-end="url(#oa-arrow)"/>
+
+            <rect x="150" y="72" width="116" height="62" rx="6" class="case-node case-node-bronze"/>
+            <text x="208" y="98" class="case-node-title case-node-title-bronze" text-anchor="middle">Warehouse</text>
+            <text x="208" y="114" class="case-node-sub" text-anchor="middle">3-layer SQLite</text>
+
+            <line x1="266" y1="103" x2="290" y2="103" class="case-edge" marker-end="url(#oa-arrow)"/>
+
+            <rect x="290" y="72" width="116" height="62" rx="6" class="case-node case-node-silver"/>
+            <text x="348" y="98" class="case-node-title case-node-title-silver" text-anchor="middle">Features</text>
+            <text x="348" y="114" class="case-node-sub" text-anchor="middle">7 tested groups</text>
+
+            <line x1="406" y1="103" x2="430" y2="103" class="case-edge" marker-end="url(#oa-arrow)"/>
+
+            <rect x="430" y="72" width="116" height="62" rx="6" class="case-node case-node-gold"/>
+            <text x="488" y="98" class="case-node-title case-node-title-gold" text-anchor="middle">Models</text>
+            <text x="488" y="114" class="case-node-sub" text-anchor="middle">vs simple rules</text>
+
+            <line x1="546" y1="103" x2="570" y2="103" class="case-edge" marker-end="url(#oa-arrow)"/>
+
+            <rect x="570" y="62" width="116" height="82" rx="6" class="case-node case-node-dashboard"/>
+            <text x="628" y="93" class="case-node-title case-node-title-dashboard" text-anchor="middle">Findings</text>
+            <text x="628" y="107" class="case-node-sub" text-anchor="middle">16 findings</text>
+            <text x="628" y="122" class="case-node-sub" text-anchor="middle">+ business impact</text>
+
+            <line x1="488" y1="134" x2="488" y2="162" class="case-edge-dashed"/>
+            <text x="488" y="178" class="case-annotation" text-anchor="middle">pass/fail rules written before any model ran</text>
+          </svg>
+        </div>
+
+        <h4 class="oa-subhead">What the data showed, without the jargon</h4>
+        <div class="case-widgets">
+          <div class="case-widget">
+            <p class="case-widget-label">1. Sales grew while recorded doctor visits fell</p>
+            <svg viewBox="0 0 260 172" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" role="img" aria-label="Bar chart. In 2023 company net sales rose 5 percent while IQVIA doctor visits fell 14 percent. In 2024 net sales rose 6 percent while visits fell 36 percent.">
+              <line x1="145" y1="16" x2="145" y2="134" class="oa-axis"/>
+              <text x="0" y="12" class="oa-year">2023</text>
+              <rect x="145" y="20" width="14" height="16" rx="3" class="oa-bar-sales"/>
+              <text x="165" y="33" class="oa-val">+5%</text>
+              <rect x="107" y="40" width="38" height="16" rx="3" class="oa-bar-visits"/>
+              <text x="101" y="53" class="oa-val" text-anchor="end">-14%</text>
+              <text x="0" y="78" class="oa-year">2024</text>
+              <rect x="145" y="86" width="16" height="16" rx="3" class="oa-bar-sales"/>
+              <text x="167" y="99" class="oa-val">+6%</text>
+              <rect x="48" y="106" width="97" height="16" rx="3" class="oa-bar-visits"/>
+              <text x="42" y="119" class="oa-val" text-anchor="end">-36%</text>
+              <rect x="0" y="140" width="10" height="10" rx="2" class="oa-bar-sales"/>
+              <text x="16" y="149" class="oa-legend">Company net sales</text>
+              <rect x="0" y="156" width="10" height="10" rx="2" class="oa-bar-visits"/>
+              <text x="16" y="165" class="oa-legend">IQVIA doctor visits</text>
+            </svg>
+            <p class="oa-takeaway">Both cannot be the whole truth, so the size of the visit decline should not be quoted as a market fact.</p>
+          </div>
+
+          <div class="case-widget">
+            <p class="case-widget-label">2. The drop is concentrated in two groups</p>
+            <svg viewBox="0 0 260 78" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" role="img" aria-label="Stacked bar. Orthopedic surgery and physician assistants account for 64 percent of the net fall of 11,256 visits.">
+              <text x="0" y="12" class="oa-year">Net fall: 11,256 visits</text>
+              <rect x="0" y="22" width="260" height="28" rx="6" class="meter-track"/>
+              <rect x="0" y="22" width="166" height="28" rx="6" class="meter-fill"/>
+              <text x="12" y="41" class="oa-seg-text">64%</text>
+              <text x="178" y="40" class="oa-legend">others 36%</text>
+              <text x="0" y="70" class="oa-legend">Orthopedic surgery + physician assistants</text>
+            </svg>
+            <p class="oa-takeaway">Tells a field or marketing team where to look first.</p>
+          </div>
+
+          <div class="case-widget">
+            <p class="case-widget-label">3. Input groups that earned their place</p>
+            <svg viewBox="0 0 260 78" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace" role="img" aria-label="Seven circles, one filled. Of 7 groups of model inputs tested, 1 improved the segment forecast and none improved the national forecast.">
+              <circle cx="14" cy="24" r="11" class="oa-dot-on"/>
+              <circle cx="50" cy="24" r="11" class="oa-dot-off"/>
+              <circle cx="86" cy="24" r="11" class="oa-dot-off"/>
+              <circle cx="122" cy="24" r="11" class="oa-dot-off"/>
+              <circle cx="158" cy="24" r="11" class="oa-dot-off"/>
+              <circle cx="194" cy="24" r="11" class="oa-dot-off"/>
+              <circle cx="230" cy="24" r="11" class="oa-dot-off"/>
+              <text x="0" y="62" class="oa-legend">1 of 7 helped, only by a small amount</text>
+            </svg>
+            <p class="oa-takeaway">Price, company sales and promotion did not predict monthly share, so they should not drive a monthly forecast.</p>
+          </div>
+        </div>
+
+        <div class="oa-scoreboard">
+          <p class="case-widget-label">Can a model beat the simple rule "same as last month"?</p>
+          <ul>
+            <li>
+              <span class="oa-q">Forecasting the national share</span>
+              <span class="oa-verdict oa-no">No</span>
+              <span class="oa-why">0 of 3 models won at 1, 3 or 6 months. The simple rule was kept.</span>
+            </li>
+            <li>
+              <span class="oa-q">Forecasting each segment's share</span>
+              <span class="oa-verdict oa-small">A little</span>
+              <span class="oa-why">Better in all 46 test months at 1 month (+0.44%), but forecasts ran 5.5% too high.</span>
+            </li>
+            <li>
+              <span class="oa-q">Alerting on a segment about to lose 30% of share</span>
+              <span class="oa-verdict oa-weak">Weak</span>
+              <span class="oa-why">A 1-month supporting flag only. Much of it is regression to the mean.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="case-results">
+          <div class="case-result"><span class="case-result-num case-result-gold">7.19M+</span><span class="case-result-label">doctor visits analyzed, Aug 2019 to Jul 2025</span></div>
+          <div class="case-result"><span class="case-result-num case-result-bronze">171</span><span class="case-result-label">public CMS, CDC, SEC and FDA files loaded and reconciled</span></div>
+          <div class="case-result"><span class="case-result-num case-result-silver">0 of 3</span><span class="case-result-label">national models beat last month's value</span></div>
+          <div class="case-result"><span class="case-result-num case-result-gold">0.92</span><span class="case-result-label">state-ranking stability, 2022 vs 2024</span></div>
+        </div>
+
+        <h4 class="oa-subhead">Business impact: four decisions this analysis supports</h4>
+        <div class="oa-impact">
+          <div class="oa-impact-item">
+            <span class="oa-impact-mark">1</span>
+            <h5>Do not quote the visit drop yet</h5>
+            <p>Sales rose 5% and 6% while visits fell 14% and 36%. A target built on that decline could be wrong by a large factor until IQVIA confirms panel coverage.</p>
+          </div>
+          <div class="oa-impact-item">
+            <span class="oa-impact-mark">2</span>
+            <h5>Review orthopedic surgery and physician assistants first</h5>
+            <p>They are 64% of the net fall of 11,256 visits, so that is where a field or marketing review pays off soonest.</p>
+          </div>
+          <div class="oa-impact-item">
+            <span class="oa-impact-mark">3</span>
+            <h5>Shortlist five states for growth</h5>
+            <p>Michigan, Arizona, Florida, Minnesota and Indiana have the most room to grow, on a ranking that held steady between 2022 and 2024 (0.92).</p>
+          </div>
+          <div class="oa-impact-item">
+            <span class="oa-impact-mark">4</span>
+            <h5>Skip the costlier national model</h5>
+            <p>Last month's value beat all three trained models, so plan on it with its range. A model would add cost and no accuracy.</p>
+          </div>
+        </div>
+        <p class="oa-status">Status: analysis and modelling are complete. The stakeholder website and question box are planned, and nothing is deployed. These are decisions the analysis supports, not measured revenue impact.</p>
+
+        <p class="case-principle-link">
+          This is where <a href="#principles" class="project-link">principle 02 (baseline before complexity)</a>
+          isn't an abstraction: every model had to beat "same as last month" under rules written before it ran. For
+          the national number none did, and reporting that plainly is the result.
+        </p>
       </div>
 
       <div class="case-study" id="ai-sentinel-deep-dive">
